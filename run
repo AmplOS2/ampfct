@@ -1,0 +1,5 @@
+#!/bin/sh
+
+docker build . -t ampfct
+docker run --rm -v $PWD:/ampfct ampfct convert term_font.bmp term_font.png
+docker run --rm -v $PWD:/ampfct ampfct python3 ampfct.py
