@@ -1,4 +1,4 @@
 #!/bin/sh
 
 docker build . -t ampfct
-docker run --rm -v $PWD:/ampfct ampfct ./run_natively
+docker run --rm -v $PWD:/ampfct ampfct ./mkfont unifont term_font

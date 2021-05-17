@@ -1,0 +1,10 @@
+#!/bin/sh
+
+mkfont() {
+        convert $1.bmp $1.png
+        ./ampfct.py $@
+}
+
+for f in $@ ; do
+        mkfont $(cat $f)
+done
