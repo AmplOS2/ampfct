@@ -27,7 +27,7 @@ for r in range(rows):
             for _ in range(padding):
                 bits.append(0)
 
-open('%s.h' % name, 'w').write('const static char %s[]=' % name + dumps(list(bits.tobytes()))
+open('%s.h' % name, 'w').write('const static unsigned char %s[]=' % name + dumps(list(bits.tobytes()))
                                .replace('[', '{').replace(']', '}').replace(' ', '') + ';' +
                                'const static unsigned %s_glyph_width=%d;' % (name, glyph_width) +
                                'const static unsigned %s_glyph_height=%d;' % (name, glyph_height) +

@@ -7,6 +7,6 @@ n = f.replace('.', '_').replace('-', '_')
 
 b = list(open(f, 'rb').read())
 
-open('%s.h' % f, 'w').write('const static char %s[]=' % n + dumps(b)
+open('%s.h' % f, 'w').write('const static unsigned char %s[]=' % n + dumps(b)
                             .replace('[', '{').replace(']', '}').replace(' ', '') + ';' +
                             'const static unsigned %s_length=%d;\n' % (n, len(b)))
